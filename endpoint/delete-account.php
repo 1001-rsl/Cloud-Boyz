@@ -5,6 +5,10 @@ session_start();
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
+    $env_hostname= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/home.php';
+    $env_hostname_error= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/index.php';
+
+
     if (isset($_GET['account'])) {
         $accountID = $_GET['account'];
 
@@ -28,14 +32,14 @@ if (isset($_SESSION['user_id'])) {
                 echo "
                 <script>
                     alert('Account Deleted Successfully');
-                    window.location.href = 'http://localhost/password-manager-app/home.php';
+                    window.location.href = '$env_hostname';
                 </script>
                 ";
             } else {
                 echo "
                 <script>
                     alert('Account not found or does not belong to the current user');
-                    window.location.href = 'http://localhost/password-manager-app/home.php';
+                    window.location.href = '$env_hostname';
                 </script>
                 ";
             }
@@ -46,7 +50,7 @@ if (isset($_SESSION['user_id'])) {
         echo "
         <script>
             alert('Invalid request. Please select an account to delete.');
-            window.location.href = 'http://localhost/password-manager-app/home.php';
+            window.location.href = '$env_hostname';
         </script>
         ";
     }
@@ -54,7 +58,7 @@ if (isset($_SESSION['user_id'])) {
     echo "
     <script>
             alert('User not logged in. Please log in before deleting an account.');
-            window.location.href = 'http://localhost/password-manager-app/index.php';
+            window.location.href = '$env_hostname_error';
     </script>
     ";
     

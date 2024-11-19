@@ -5,7 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $env_hostname= 'https://stunning-xylophone-jjqgp7rxq4jq2w6q-80.app.github.dev/Cloud-Boyz/home.php';
+    $env_hostname= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/index.php';
+    $env_hostname_correct= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/home.php';
 
     $stmt = $conn->prepare("SELECT `tbl_user_id`, `password` FROM `tbl_user` WHERE `username` = :username");
     $stmt->bindParam(':username', $username);
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "
             <script>
                 alert('Login Successfully!');
-                window.location.href = '$env_hostname';
+                window.location.href = '$env_hostname_correct';
             </script>
             ";
         } else {

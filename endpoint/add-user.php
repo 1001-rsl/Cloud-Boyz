@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm_password']; // Fixed input name
 
+    $env_hostname= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/home.php';
 
     try {
         $stmt = $conn->prepare("SELECT `username` FROM `tbl_user` WHERE `username` = :username");
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "
             <script>
                 alert('Registered Successfully');
-                window.location.href = 'http://localhost/password-manager-app/index.php';
+                window.location.href = '$env_hostname';
             </script>
             ";
 
@@ -40,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "
             <script>
                 alert('User Already Exists');
-                window.location.href = 'http://localhost/password-manager-app/index.php';
+                window.location.href = '$env_hostname';
             </script>
             ";
         }
@@ -52,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "
     <script>
         alert('Account Registration Failed!');
-        window.location.href = 'http://localhost/password-manager-app/index.php';
+        window.location.href = '$env_hostname';
     </script>
     ";
 }

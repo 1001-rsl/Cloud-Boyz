@@ -12,6 +12,8 @@ if (isset($_SESSION['user_id'])) {
         $link = $_POST['link'];
         $description = $_POST['description'];
 
+        $env_hostname= 'https://sturdy-funicular-jjqgrrwp69gw3546p-80.app.github.dev/Cloud-Boyz/home.php';
+
         try {
             $stmt = $conn->prepare("SELECT `username` FROM `tbl_accounts` WHERE `username` = :username");
             $stmt->execute([
@@ -36,7 +38,7 @@ if (isset($_SESSION['user_id'])) {
                 echo "
                 <script>
                     alert('Registered Successfully');
-                    window.location.href = 'http://localhost/password-manager-app/home.php';
+                    window.location.href = '$env_hostname';
                 </script>
                 ";
 
@@ -45,7 +47,7 @@ if (isset($_SESSION['user_id'])) {
                 echo "
                 <script>
                     alert('User Already Exists');
-                    window.location.href = 'http://localhost/password-manager-app/home.php';
+                    window.location.href = '$env_hostname';
                 </script>
                 ";
             }
@@ -56,7 +58,7 @@ if (isset($_SESSION['user_id'])) {
         echo "
         <script>
             alert('Account Registration Failed!');
-            window.location.href = 'http://localhost/password-manager-app/home.php';
+            window.location.href = '$env_hostname';
         </script>
         ";
     }
