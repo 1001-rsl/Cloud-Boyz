@@ -69,7 +69,7 @@ include ('./partials/modal.php');
                 </thead>
                 <tbody class="text-center">
                     <?php 
-                    $stmt = $conn->prepare("SELECT * FROM `tbl_accounts`");
+                    $stmt = $conn->prepare("SELECT * FROM `tbl_accounts` WHERE tbl_user_id=$userID");
                     $stmt->execute();
                     $result = $stmt->fetchAll();
 
