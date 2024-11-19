@@ -82,8 +82,16 @@
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <!-- Generate Pass -->
-                    <button type="button" onclick="generatePassword()" class="btn btn-secondary">Generate</button> 
-                    <h5>Generated Password: <span id="generatepassword"></span></h5>
+                     <div class="container" style="display:flex">
+                        <div class="item" style="flex:1;width:30%">
+                            <button type="button" onclick="generatePassword()" class="btn btn-secondary">Generate</button>
+                        </div>
+                         <div class="item" style="width:70%">
+                            <p>Generated Password: <span id="generatepassword"></span></p>
+                         </div>
+                        
+                     </div>
+                    
                     
                     <div class="form-group">
                         <label for="link">Link</label>
