@@ -3,9 +3,8 @@
     <div class="main">
         <div class="login-container">
             <i class="fa-solid fa-user-lock lock-icon"></i>
-            <h2 class="text-center mb-5">Password Manager App</h2>
+            <h2 class="text-center mb-5">SAFE IT</h2>
             <div class="login-form">
-                <h5 class="text-center">-Login Form-</h5>
                 <form action="./endpoint/login.php" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -16,12 +15,12 @@
                         <input type="password" class="form-control" id="password" name="password">
                         <small class="show-login-form link-show">No Account? Register Here!</small>
                     </div>
-                    <button type="submit" class="form-control btn btn-dark">Submit</button>
+                    <button type="submit" class="form-control btn login" style="background-color:#009FE0" >Submit</button>
                 </form>
             </div>
 
             <div class="registration-form" style="display: none;">
-                <h5 class="text-center">-Registration Form-</h5>
+                <h5 class="text-center">Registration</h5>
                 <form action="./endpoint/add-user.php" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
