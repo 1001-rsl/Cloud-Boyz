@@ -5,6 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $env_hostname= 'https://stunning-xylophone-jjqgp7rxq4jq2w6q-80.app.github.dev/Cloud-Boyz/home.php';
+
     $stmt = $conn->prepare("SELECT `tbl_user_id`, `password` FROM `tbl_user` WHERE `username` = :username");
     $stmt->bindParam(':username', $username);
     $stmt->execute();
@@ -22,14 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "
             <script>
                 alert('Login Successfully!');
-                window.location.href = 'http://localhost/password-manager-app/home.php';
+                window.location.href = '$env_hostname';
             </script>
             ";
         } else {
             echo "
             <script>
                 alert('Login Failed, Incorrect Password!');
-                window.location.href = 'http://localhost/password-manager-app/index.php';
+                window.location.href = '$env_hostname';
             </script>
             ";
         }
@@ -37,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "
             <script>
                 alert('Login Failed, User Not Found!');
-                window.location.href = 'http://localhost/password-manager-app/index.php';
+                window.location.href = '$env_hostname';
             </script>
             ";
     }

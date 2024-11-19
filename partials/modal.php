@@ -84,9 +84,9 @@
                     <!-- Generate Pass -->
                      <div class="container" style="display:flex">
                         <div class="item" style="flex:1;width:30%">
-                            <button type="button" onclick="generatePassword()" class="btn btn-secondary">Generate</button>
+                            <button type="button" onclick="generatePassword()" class="btn btn-secondary" style="background-color:#00529F; margin: 1rem;">Generate</button>
                         </div>
-                         <div class="item" style="width:70%">
+                         <div class="item" style="width:50%; margin:1rem">
                             <p>Generated Password: <span id="generatepassword"></span></p>
                          </div>
                         
@@ -102,8 +102,8 @@
                         <textarea class="form-control" name="description" id="description" rows="5"></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-dark">Save Account</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: white; border-color:#00529f; color:#00529f">Close</button>
+                        <button type="submit" class="btn btn-dark" style="background-color:#00529f">Save Account</button>
                     </div>
                 </form>
             </div>
@@ -136,6 +136,16 @@
                         <label for="updatePassword">Password</label>
                         <input type="text" class="form-control" id="updatePassword" name="password">
                     </div>
+                    <!-- Generate Pass -->
+                    <div class="container" style="display:flex">
+                        <div class="item" style="flex:1;width:30%">
+                            <button type="button" onclick="generatePasswords()" class="btn btn-secondary" style="background-color:#00529F; margin: 1rem;">Generate</button>
+                        </div>
+                         <div class="item" style="width:50%; margin:1rem">
+                            <p>Generated Password: <span id="generatepasswords"></span></p>
+                         </div>
+                        
+                     </div>
                     <div class="form-group">
                         <label for="updateLink">Link</label>
                         <input type="text" class="form-control" id="updateLink" name="link">
@@ -145,8 +155,8 @@
                         <textarea class="form-control" name="description" id="updateDescription" rows="5"></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-dark">Save changes</button>
+                        <button type="button" class="btn btn-secondary" style="background-color: white; border-color:#00529f; color:#00529f" data-dismiss="modal" >Close</button>
+                        <button type="submit" class="btn btn-dark" style="background-color:#00529f">Save changes</button>
                     </div>
                 </form>
             </div>
@@ -154,3 +164,4 @@
     </div>
 </div>
 <script> function generatePassword() { const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()'; let password = ''; for (let i = 0; i < 16; i++) { password += characters.charAt(Math.floor(Math.random() * characters.length)); } document.getElementById('generatepassword').innerText = password; } </script>
+<script> function generatePasswords() { const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()'; let password = ''; for (let i = 0; i < 16; i++) { password += characters.charAt(Math.floor(Math.random() * characters.length)); } document.getElementById('generatepasswords').innerText = password; } </script>
