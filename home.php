@@ -22,8 +22,9 @@ include ('./partials/modal.php');
 
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <a class="navbar-brand ml-4" href="home.php">Password Manager App</a>
+<nav class="navbar navbar-expand-lg" style="background-color: #00529f">
+    <a class="navbar-brand ml-4" href="home.php" style="color: #ffffff">SAFE IT!
+    </a>
     <div class="form-inline my-2 my-lg-0 ml-auto">
         <div class="dropdown">
             <a class="nav-link dropdown-toggle link-unstyled" style="text-decoration: none; color: #eee;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -48,7 +49,7 @@ include ('./partials/modal.php');
     <div class="accounts-container">
         <h4 class="text-center"><strong><?php echo $user_name; ?>'s Accounts</strong></h4>
         <!-- Add Account Button -->
-        <button type="button" class="btn btn-dark mb-3 float-right" data-toggle="modal" data-target="#addAccountModal">
+        <button type="button" class="btn btn-dark mb-3 float-right" style="background-color: #00529f"data-toggle="modal" data-target="#addAccountModal">
             Add Account
         </button>
 
@@ -90,7 +91,7 @@ include ('./partials/modal.php');
                         <td id="link-<?= $accountID ?>"><a href="<?php echo $link ?>" target="_blank"><?php echo $link ?></a></td>
                         <td id="description-<?= $accountID ?>"><?php echo $description ?></td>
                         <td>
-                            <button id="editBtn" onclick="update_account(<?php echo $accountID ?>)" title="Edit"><i class="fa-solid fa-pencil"></i></button>
+                            <button id="editBtn" onclick="update_account(<?php echo $accountID ?>)" title="Edit"><i class="fa-solid fa-pencil" style="background-color:#fffff"></i></button>
                             <button id="deleteBtn" onclick="delete_account(<?php echo $accountID ?>)" title="Delete"><i class="fa-solid fa-trash"></i></button>
                         </td>
                     </tr>

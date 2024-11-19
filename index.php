@@ -3,7 +3,7 @@
     <div class="main">
         <div class="login-container">
             <i class="fa-solid fa-user-lock lock-icon"></i>
-            <h2 class="text-center mb-5">SAFE IT</h2>
+            <h2 class="text-center mb-5">SAFE IT!</h2>
             <div class="login-form">
                 <form action="./endpoint/login.php" method="POST">
                     <div class="form-group">
@@ -15,7 +15,7 @@
                         <input type="password" class="form-control" id="password" name="password">
                         <small class="show-login-form link-show">No Account? Register Here!</small>
                     </div>
-                    <button type="submit" class="form-control btn login" style="background-color:#009FE0" >Submit</button>
+                    <button type="submit" class="form-control btn btn-dark" style="background-color:#00529f; border: none;" >Submit</button>
                 </form>
             </div>
 
@@ -43,7 +43,7 @@
                         <input type="password" class="form-control" id="createPassword" name="password">
                         <small class="show-registration-form link-show">Already have an accont? Log in here!</small>
                     </div>
-                    <button type="submit" class="form-control btn btn-dark">Create Account</button>
+                    <button type="submit" class="form-control btn btn-dark" style="background-color:#00529f; border: none">Create Account</button>
                 </form>
             </div>
         </div>
