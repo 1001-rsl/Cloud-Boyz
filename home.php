@@ -30,7 +30,7 @@ include ('./partials/modal.php');
             <a class="nav-link dropdown-toggle link-unstyled" style="text-decoration: none; color: #eee;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                 <?php
                 if (isset($user_name)) {
-                    echo "Welcome, $user_name";
+                    echo "Hi, $user_name";
                 } else {
                     echo "My Account";
                 }

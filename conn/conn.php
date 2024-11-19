@@ -1,8 +1,8 @@
 <?php 
 
-$servername = "localhost";
+$servername = "mysql";
 $username = "root";
-$password = "";
+$password = "root";
 $db = "password_manager_db";
 
 try {
